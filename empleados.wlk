@@ -1,16 +1,41 @@
 //Escribir aqui los objetos
-object pepita {
-    var energia = 100
+object gimenez {
 
-    method comer(alimento){
-        energia = energia + alimento.energiaQueAporta()
+    var fondo = 300000
+
+    method cobrarSueldo(empleado) {    
+        fondo = fondo - empleado.sueldo()
+    }
+}
+
+object galvan {
+
+    var sueldo = 15000
+
+    method sueldo() {
+        return sueldo  
     }
 
-    method energia(){
-        return energia 
+    method nuevoSueldo(nuevoValor) {
+        sueldo = nuevoValor
+    }
+}
+
+object baigorria {
+
+    var sueldo = 0
+
+    method sueldo() {
+        return sueldo
     }
 
-    method volar(distancia){
-        energia = energia - 10 - distancia  
-    } 
+    method vender(alimento, cantidad) {
+        sueldo = sueldo + (alimento.valorEnPlata() * cantidad)
+    }
+}
+
+object empanada {
+    method valorEnPlata() {
+        return 15
+    }
 }
