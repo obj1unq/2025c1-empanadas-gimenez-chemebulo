@@ -23,19 +23,23 @@ object galvan {
 
 object baigorria {
 
-    var sueldo = 0
+    var cantidadDeEmpanadas = 0
+    var totalCobrado = 0
 
     method sueldo() {
-        return sueldo
+        return 15 * cantidadDeEmpanadas
     }
 
-    method vender(alimento, cantidad) {
-        sueldo = sueldo + (alimento.valorEnPlata() * cantidad)
+    method cobrarSueldo() {
+        totalCobrado = totalCobrado + (15 * cantidadDeEmpanadas)
+        cantidadDeEmpanadas = 0
     }
-}
 
-object empanada {
-    method valorEnPlata() {
-        return 15
+    method vender(cantidad) {
+        cantidadDeEmpanadas = cantidadDeEmpanadas + cantidad
+    }
+
+    method totalCobrado() {
+        return totalCobrado
     }
 }
