@@ -10,6 +10,8 @@ object gimenez {
 
 object galvan {
 
+    var dinero = 0
+    var deuda = 0
     var sueldo = 15000
 
     method sueldo() {
@@ -18,6 +20,23 @@ object galvan {
 
     method nuevoSueldo(nuevoValor) {
         sueldo = nuevoValor
+    }
+
+    method cobrar() {
+        dinero = dinero + sueldo - deuda
+    // planteo un if 
+    }
+
+    method gastar(cantidad) {
+        deuda = deuda + cantidad - dinero
+    }
+
+    method deuda() {
+        return deuda
+    }
+
+    method dinero() {
+        return dinero
     }
 }
 
